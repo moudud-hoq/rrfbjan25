@@ -9,3 +9,9 @@ let x = 10;
 let r = 11;
 let sum = x + r + b;
 console.log(sum);
+
+if (3 > 5) {
+    console.log("This");
+} else {
+    console.log("object");
+}
