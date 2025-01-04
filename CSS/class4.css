@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", serif;
+    scroll-behavior: smooth;
+    font-weight: 500;
+    line-height: 1.6;
+    word-spacing: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* Header */
+.header {
+    background-color: rgb(211, 255, 214);
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    /* শেডো এফেক্ট */
+}
+
+.logo {
+    font-family: "Rubik Vinyl", serif;
+    width: 15%;
+    padding: 0px 0px 0px 10px;
+    font-size: 1.5rem;
+    color: #215cff;
+}
+
+.menu {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    /* এখানে Flexbox এর মাধ্যমে মেনু টা Row বরাবর মাঝখানে রেখেছি */
+    align-items: center;
+    /* এখানে Flexbox এর মাধ্যমে মেনু টা Column বরাবর মাঝখানে রেখেছি  */
+    gap: 20px;
+    padding: 20px 0px;
+    border-radius: 50px 0 50px 0;
+}
+
+.menu a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.callme {
+    width: 25%;
+    text-align: right;
+    padding: 0px 5px 0px 0px;
+}
+
+.callme a {
+    text-decoration: none;
+    color: #215cff;
+    font-weight: 700;
+    background-color: black;
+    color: #fff;
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+
+/* Main Title*/
+.titlearea {
+    margin: 0px 0px;
+}
+
+.main_title {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* About Us Area*/
+.aboutusarea {
+    margin: 0px 0px;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    /* এখানে Flexbox এর মাধ্যমে মেনু টা Row বরাবর মাঝখানে রেখেছি */
+    gap: 20px;
+}
+
+/* Latest video Area */
+.latestvideoarea {
+    margin: 0px 0px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    /* এখানে Flexbox এর মাধ্যমে মেনু টা Row বরাবর মাঝখানে রেখেছি */
+    align-items: center;
+    /* এখানে Flexbox এর মাধ্যমে মেনু টা Column বরাবর মাঝখানে রেখেছি  */
+    background-color: greenyellow;
+
+}
+
+#videoandimagetext, #videoandimagevideo {
+    padding: 50px 0px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    /* এখানে Flexbox এর মাধ্যমে মেনু টা Row বরাবর মাঝখানে রেখেছি */
+
+}
+
+#videoandimagetext {
+    text-align: center;
+    flex-direction: column;
+    /* কলাম ভিত্তিক লেআউট */
+    gap: 10px;
+    background-color: rgb(231, 48, 255);
+}
+
+/* Contact Us Area*/
+.contactusarea {
+    display: flex;
+    color: #fff;
+    background-color: rgb(71, 71, 71);
+}
+
+#contactustext, #contactusform {
+    padding: 50px 10px 50px 10px;
+    width: 50%;
+}
+
+#contactustext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#contactusform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="submit"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+input[type="submit"] {
+    background-color: green;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    font-family: "Josefin Sans", serif;
+    background-color: #000000;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+}
