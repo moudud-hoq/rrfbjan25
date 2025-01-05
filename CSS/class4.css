@@ -8,9 +8,12 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", serif;
-    scroll-behavior: smooth;
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: 0.5px;
@@ -18,12 +21,13 @@ body {
 }
 
 iframe {
-    border-radius: "30px"
+    border-radius: 20px;
 }
+
 
 /* Banner Styles */
 .banner {
-    background-image: url(../images/banner.jpg);
+    background-image: url(../images/Webbanner.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -31,6 +35,8 @@ iframe {
     /* Fallback color */
     position: relative;
     z-index: 1;
+    /* Add clip-path for curved bottom */
+    clip-path: ellipse(100% 100% at 50% 0%);
 }
 
 .banner:after {
@@ -44,7 +50,7 @@ iframe {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 /* Header */
@@ -125,7 +131,7 @@ iframe {
 }
 
 
-#banner_contactus, #tutorial{
+#banner_contactus, #tutorial {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -156,15 +162,75 @@ iframe {
 
 
 
+/* Key Features Area */
+.keyfeaturesarea {
+    margin-top: -50px;
+    /* Adjust this value to control overlap */
+    padding: 70px 20px 40px;
+    position: relative;
+    background: #fff;
+}
+
+.keyfeatures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+
+
+.keyfeature {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.keyfeature:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: background-color 0.5s ease-in, color 0.5s ease-out;
+}
+
+.key_features_icons {
+    border: 1px solid #ccc; solid #740083;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.key_features_icons img {
+    margin: 100px;
+}
 
 
 /* About Us Area*/
 .aboutusarea {
     margin: 0px 0px;
-    padding: 40px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    padding: 40px 40px;
+    background-color: rgb(236, 236, 236);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    clip-path: ellipse(100% 95% at 50% 100%);
+}
+
+.aboutusarea h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.aboutusarea:hover {
+    background: #d4d4d4;
+    transition: background-color 0.5s ease-in, color 0.5s ease-out;
 }
 
 /* Latest video Area */
@@ -175,7 +241,6 @@ iframe {
     justify-content: center;
     align-items: center;
     background-color: rgb(188, 228, 255);
-
 }
 
 #videoandimagetext, #videoandimagevideo {
@@ -193,55 +258,108 @@ iframe {
     background-color: rgb(252, 227, 255);
 }
 
-/* Contact Us Area*/
+/* Contact Us Area */
 .contactusarea {
     display: flex;
-    color: #ffffff;
-    background-color: rgb(131, 131, 131);
+    justify-content: space-between;
+    background-image: url(../Images/contuctusarea\ \(1\).png);
+    background-color: #ebebeb;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #contactustext, #contactusform {
-    padding: 50px 10px;
-    width: 50%;
+    width: 48%;
 }
 
 #contactustext {
-    display: flex;
+display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 20px;
+}
+
+#contactustext h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+#contactustext p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
 }
 
 #contactusform {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="submit"], textarea {
+#contactusform h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#contactusform label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+#contactusform input[type="text"],
+#contactusform input[type="tel"],
+#contactusform textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
-    border: 1px solid #000;
+    border: 1px solid #ccc; solid #ccc;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
 }
 
-input[type="submit"] {
-    background-color: green;
+#contactusform input[type="submit"] {
+    background-color: #28a745;
     color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
 }
+
+#contactusform input[type="submit"]:hover {
+    background-color: #218838;
+}
+
 
 /* Footer */
 .footer {
+    background: #000;
     font-family: "Josefin Sans", serif;
-    background-color: #000000;
-    padding: 30px 0px;
+    padding: 30px 0;
     display: flex;
     justify-content: center;
     gap: 30px;
+    border-radius: 200px 200px 0 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
 }
 
 .footer a {
     text-decoration: none;
-    color: #fff;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
+
+.footer a:hover {
+    color: #ffed00; /* Yellow on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.footer a:active {
+    transform: scale(0.9); /* Small shrink effect when clicked */
+}
+
