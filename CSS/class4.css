@@ -5,42 +5,67 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
-    font-family: "Raleway", serif;
+    font-family: "Montserrat", serif;
     scroll-behavior: smooth;
     font-weight: 500;
     line-height: 1.6;
-    word-spacing: 4px;
     letter-spacing: 0.5px;
+    word-spacing: 4px;
+}
+
+iframe {
+    border-radius: "30px"
+}
+
+/* Banner Styles */
+.banner {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: #000;
+    /* Fallback color */
+    position: relative;
+    z-index: 1;
+}
+
+.banner:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0.6;
 }
 
 /* Header */
 .header {
-    background-color: rgb(211, 255, 214);
     display: flex;
     align-items: center;
-    padding: 20px 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-    /* শেডো এফেক্ট */
+    justify-content: space-between;
+    padding: 30px 300px;
 }
 
 .logo {
     font-family: "Rubik Vinyl", serif;
-    width: 15%;
     padding: 0px 0px 0px 10px;
-    font-size: 1.5rem;
-    color: #215cff;
+    color: #ffffff;
+    font-size: 30px;
 }
 
 .menu {
-    width: 60%;
     display: flex;
     justify-content: center;
-    /* এখানে Flexbox এর মাধ্যমে মেনু টা Row বরাবর মাঝখানে রেখেছি */
     align-items: center;
-    /* এখানে Flexbox এর মাধ্যমে মেনু টা Column বরাবর মাঝখানে রেখেছি  */
     gap: 20px;
     padding: 20px 0px;
     border-radius: 50px 0 50px 0;
@@ -49,33 +74,89 @@ body {
 .menu a {
     list-style: none;
     text-decoration: none;
-}
-
-.callme {
-    width: 25%;
-    text-align: right;
-    padding: 0px 5px 0px 0px;
-}
-
-.callme a {
-    text-decoration: none;
-    color: #215cff;
-    font-weight: 700;
-    background-color: black;
     color: #fff;
-    padding: 15px 15px;
-    border-radius: 10px;
+    word-spacing: normal;
 }
 
-/* Main Title*/
-.titlearea {
-    margin: 0px 0px;
+.menu a:hover {
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
-.main_title {
+#contactus {
+    text-decoration: none;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    color: #ff0000;
+    padding: 7px 25px;
+    border-radius: 5px;
+}
+
+#contactus:hover {
+    background-color: #64564B;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Banner Content */
+.bannercontent {
+    max-width: 700px;
+    margin: 5% auto;
     text-align: center;
-    font-size: 30px;
+    color: #fff;
 }
+
+.bannercontent h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.bannercontent p {
+    font-size: 15px;
+    margin: 30px 0;
+}
+
+.bannerbutton {
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+
+#banner_contactus, #tutorial{
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#banner_contactus {
+    background-color: #ffffff;
+    color: #ff0000;
+
+}
+
+#banner_contactus:hover {
+    background-color: #314E6C;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#tutorial {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+#tutorial:hover {
+    background-color: #314E6C;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
 
 /* About Us Area*/
 .aboutusarea {
@@ -83,7 +164,6 @@ body {
     padding: 40px 10px;
     display: flex;
     flex-direction: column;
-    /* এখানে Flexbox এর মাধ্যমে মেনু টা Row বরাবর মাঝখানে রেখেছি */
     gap: 20px;
 }
 
@@ -93,10 +173,8 @@ body {
     gap: 20px;
     display: flex;
     justify-content: center;
-    /* এখানে Flexbox এর মাধ্যমে মেনু টা Row বরাবর মাঝখানে রেখেছি */
     align-items: center;
-    /* এখানে Flexbox এর মাধ্যমে মেনু টা Column বরাবর মাঝখানে রেখেছি  */
-    background-color: greenyellow;
+    background-color: rgb(188, 228, 255);
 
 }
 
@@ -105,27 +183,25 @@ body {
     width: 50%;
     display: flex;
     justify-content: center;
-    /* এখানে Flexbox এর মাধ্যমে মেনু টা Row বরাবর মাঝখানে রেখেছি */
 
 }
 
 #videoandimagetext {
     text-align: center;
     flex-direction: column;
-    /* কলাম ভিত্তিক লেআউট */
     gap: 10px;
-    background-color: rgb(231, 48, 255);
+    background-color: rgb(252, 227, 255);
 }
 
 /* Contact Us Area*/
 .contactusarea {
     display: flex;
-    color: #fff;
-    background-color: rgb(71, 71, 71);
+    color: #ffffff;
+    background-color: rgb(131, 131, 131);
 }
 
 #contactustext, #contactusform {
-    padding: 50px 10px 50px 10px;
+    padding: 50px 10px;
     width: 50%;
 }
 
