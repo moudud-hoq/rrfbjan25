@@ -263,7 +263,7 @@ iframe {
 .contactusarea {
     display: flex;
     justify-content: space-between;
-    background-image: url('https://ibb.co.com/GnPnzcY');
+    background-image: url(/Images/Webbanner.png);
     background-color: #ebebeb;
     padding: 50px;
     border-radius: 8px;
