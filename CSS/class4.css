@@ -27,7 +27,7 @@ iframe {
 
 /* Banner Styles */
 .banner {
-    background-image: url(../images/Webbanner.png);
+    background-image: url(../images/webbanner.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -203,7 +203,6 @@ iframe {
 
 .key_features_icons {
     border: 1px solid #ccc;
-    solid #740083;
     border-radius: 50%;
     padding: 10px;
 }
@@ -263,7 +262,7 @@ iframe {
 .contactusarea {
     display: flex;
     justify-content: space-between;
-    background-image: url(/Images/Webbanner.png);
+    background-image: url(/images/contuctusarea.png);
     background-color: #ebebeb;
     padding: 50px;
     border-radius: 8px;
