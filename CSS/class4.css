@@ -202,7 +202,8 @@ iframe {
 }
 
 .key_features_icons {
-    border: 1px solid #ccc; solid #740083;
+    border: 1px solid #ccc;
+    solid #740083;
     border-radius: 50%;
     padding: 10px;
 }
@@ -262,7 +263,7 @@ iframe {
 .contactusarea {
     display: flex;
     justify-content: space-between;
-    background-image: url(../Images/contuctusarea\ \(1\).png);
+    background-image: url('https://ibb.co.com/GnPnzcY');
     background-color: #ebebeb;
     padding: 50px;
     border-radius: 8px;
@@ -274,7 +275,7 @@ iframe {
 }
 
 #contactustext {
-display: flex;
+    display: flex;
     flex-direction: column;
     gap: 20px;
 }
@@ -313,7 +314,8 @@ display: flex;
     width: 100%;
     padding: 12px;
     border-radius: 5px;
-    border: 1px solid #ccc; solid #ccc;
+    border: 1px solid #ccc;
+    solid #ccc;
     font-size: 1em;
     color: #333;
     box-sizing: border-box;
@@ -344,22 +346,26 @@ display: flex;
     justify-content: center;
     gap: 30px;
     border-radius: 200px 200px 0 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for depth */
 }
 
 .footer a {
     text-decoration: none;
     color: white;
     font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
 }
 
 .footer a:hover {
-    color: #ffed00; /* Yellow on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    color: #ffed00;
+    /* Yellow on hover */
+    transform: scale(1.1);
+    /* Slight zoom effect */
 }
 
 .footer a:active {
-    transform: scale(0.9); /* Small shrink effect when clicked */
+    transform: scale(0.9);
+    /* Small shrink effect when clicked */
 }
-
