@@ -31,8 +31,9 @@ iframe {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    background-color: #000;
-    /* Fallback color */
+    background-color: #72195c;
+    /* background: linear-gradient(180deg, #1a2a6c, #6d0077, #b21f1f);*/
+    /* Gradient fallback */
     position: relative;
     z-index: 1;
     /* Add clip-path for curved bottom */
