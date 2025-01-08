@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cta-area-inner {
+    display: flex;
+}
+
+
+
+.cta-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.single-cta-box {
+    width: 35%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.cta-icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.single-cta-box-inner {
+    box-shadow: 0 0 10px #8888883b;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: floralwhite;
+}
+
+.cta-area {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-area:after {
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 50%;
+    content: "";
+    background-color: #888;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.cta-text h4:before {
+    content: "Test";
+    /* position: absolute; */
+    color: red;
+    z-index: -1;
+    margin: 5px;
+    text-decoration:underline line-through wavy rgb(80, 167, 0); ;
+    text-decoration-thickness: 2px;
+    font-size: 50px;
+}
+
+.cta-text h4 {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-text {
+    width: 40%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0;
+    color: #666;
+}
