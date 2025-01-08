@@ -64,7 +64,8 @@
     color: red;
     z-index: -1;
     margin: 5px;
-    text-decoration:underline line-through wavy rgb(80, 167, 0); ;
+    text-decoration: underline line-through wavy rgb(80, 167, 0);
+    ;
     text-decoration-thickness: 2px;
     font-size: 50px;
 }
@@ -83,3 +84,5 @@
     padding: 50px 0;
     color: #666;
 }
+
+
