@@ -344,6 +344,92 @@ iframe {
 }
 
 
+/*purpose section*/
+.purpose-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.purpose-section .purpose-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.purpose-section .img {
+    max-width: 45%;
+    text-align: center;
+}
+
+.purpose-section .img img {
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.purpose-section .img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.purpose-section .purpose-content {
+    max-width: 50%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.purpose-content p {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.9;
+    color: #666;
+    position: relative;
+}
+
+.purpose-content p::before {
+    content: "The";
+    font-size: 24px;
+    font-style: italic;
+    margin-right: 10px;
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: -50px;
+}
+
+.purpose-content h2 {
+    color: #314E6C;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+
+
 
 /* Latest video Area */
 .latestvideoarea {
