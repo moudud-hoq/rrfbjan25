@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
+
+
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Headings and paragraphs */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 15px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #FFF9F3;
+    scroll-behavior: smooth;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+
+/* Header Wrapper */
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 80px 10px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    font-weight: 500;
+    font-family: "Poppins", serif;
+    background-color: #FFF9F3;
+}
+
+/* Logo section */
+.logo {
+    width: 20%;
+}
+
+/* Menu section */
+.menu {
+    width: 60%;
+}
+
+.menu, nav, ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu, nav, ul, li, a {
+    font-weight: 500;
+    font-size: 14px;
+    color: #292281;
+}
+
+/* Login/Sign-up Buttons */
+.log-sign-btn {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.signup, .login {
+    color: blue;
+    font-size: 15px;
+
+
+}
+
+.signup {
+    border: 1px solid blue;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+}
+
+/* Featured On Section */
+
+
+/*Hero Section*/
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 130px 0;
+    gap: 20px;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: "Josefin", serif;
+    font-size: 80px;
+    color: #17134A;
+    line-height: 1;
+    padding: 20px 50px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #584b85;
+}
+
+.features, ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.features li{
+    font-size: 17px;
+
+}
+.features li svg {
+    width: 15px;
+}
+
+.features svg {
+    margin-right: 5px;
+}
+
+
+
+/*hero btn*/
+.hero-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hero-button a {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-button svg {
+    width: 10px;
+}
+
+.hero-button a:hover {
+    background-color: #007bff;
+}
+
+/*Featured On*/
+
+.featured-on {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.featured-on img {
+    width: 90px;
+    height: 30px;
+}
+
+/* Hero Video */
+.hero-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.hero-video video {
+    border: 22px solid rgb(226, 226, 226);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
