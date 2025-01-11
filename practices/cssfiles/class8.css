@@ -1,117 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&display=swap');
 
-
-/* Resetting default styles */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Headings and paragraphs */
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0 0 15px;
-}
-
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
+/* Base styles */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #FFF9F3;
     scroll-behavior: smooth;
 }
 
-/* Links */
+/* Typography */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 15px;
+}
+
 a {
     text-decoration: none;
     color: #333;
 }
 
-a:hover {
-    text-decoration: none;
+/* Images and Media */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
+video {
+    border-radius: 18px;
+}
 
-
-/* Header Wrapper */
+/* Header styles */
 .header-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+    width: 100%;
+    padding: 20px 100px 10px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    background-color: #FFF9F3;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 20px 80px 10px;
-    border-bottom: 1px solid rgb(211, 211, 211);
-    font-weight: 500;
-    font-family: "Poppins", serif;
-    background-color: #FFF9F3;
 }
 
-/* Logo section */
 .logo {
-    width: 20%;
+    width: 15%;
 }
 
-/* Menu section */
+/* Navigation */
 .menu {
-    width: 60%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu, nav, ul {
+.menu nav,
+.menu ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 }
 
-.menu, nav, ul, li, a {
-    font-weight: 500;
-    font-size: 14px;
+.menu a {
+    font-size: 16px;
     color: #292281;
+    font-weight: 700;
+    font-family: "Lato", serif;
 }
 
-/* Login/Sign-up Buttons */
+.menu a:hover {
+    color: #007bff;
+}
+
+.menu-ul .li-feature::before {
+    content: "👌 ";
+}
+
+/* Authentication buttons */
 .log-sign-btn {
     width: 20%;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 }
 
-.signup, .login {
+.signup,
+.login {
     color: blue;
-    font-size: 15px;
+    font-size: 14px;
+}
 
-
+.signup:hover,
+.login:hover {
+    text-decoration: underline;
 }
 
 .signup {
     border: 1px solid blue;
-    padding: 10px 20px;
+    padding: 7px 15px;
     border-radius: 5px;
-
 }
 
-/* Featured On Section */
-
-
-/*Hero Section*/
+/* Hero section */
 .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 130px 0;
-    gap: 20px;
+    margin: 150px 0;
+    gap: 15px;
 }
 
 .hero-text {
@@ -119,11 +127,13 @@ a:hover {
 }
 
 .hero-text h1 {
-    font-family: "Josefin", serif;
-    font-size: 80px;
+    font-family: "Righteous", serif;
+    font-size: 70px;
     color: #17134A;
     line-height: 1;
-    padding: 20px 50px;
+    max-width: 1200px;
+    font-weight: 100;
+    letter-spacing: -3px;
 }
 
 .hero-text p {
@@ -131,28 +141,25 @@ a:hover {
     color: #584b85;
 }
 
-.features, ul li {
+/* Features */
+.features {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.features li{
+.features li {
     font-size: 17px;
-
+    display: flex;
+    align-items: center;
 }
+
 .features li svg {
     width: 15px;
-}
-
-.features svg {
     margin-right: 5px;
 }
 
-
-
-/*hero btn*/
+/* Hero button */
 .hero-button {
     display: flex;
     justify-content: center;
@@ -164,23 +171,21 @@ a:hover {
     background-color: #0056b3;
     color: #fff;
     padding: 20px 50px;
-    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-}
-
-.hero-button svg {
-    width: 10px;
 }
 
 .hero-button a:hover {
     background-color: #007bff;
 }
 
-/*Featured On*/
+.hero-button svg {
+    width: 10px;
+}
 
+/* Featured section */
 .featured-on {
-    padding: 50px 0;
+    padding: 30px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,21 +193,30 @@ a:hover {
 }
 
 .featured-on img {
-    width: 90px;
+    width: 80px;
     height: 30px;
 }
 
-/* Hero Video */
+/* Hero video */
 .hero-video {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin: 20px auto;
+    max-width: 1000px;
+}
+
+.video-border-wrapper {
+    background-color: #d3d3d3;
+    padding: 25px;
+    border-radius: 24px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    width: 100%;
 }
 
 .hero-video video {
-    border: 22px solid rgb(226, 226, 226);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: block;
+    border-radius: 8px;
 }
