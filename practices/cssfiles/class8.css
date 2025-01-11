@@ -42,7 +42,7 @@ video {
     left: 0;
     z-index: 1;
     width: 100%;
-    padding: 20px 100px 10px;
+    padding: 20px 100px 15px;
     border-bottom: 1px solid rgb(211, 211, 211);
     background-color: #FFF9F3;
     display: flex;
@@ -80,6 +80,7 @@ video {
 
 .menu a:hover {
     color: #007bff;
+    text-decoration: none;
 }
 
 .menu-ul .li-feature::before {
@@ -99,6 +100,7 @@ video {
 .login {
     color: blue;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .signup:hover,
@@ -137,27 +139,44 @@ video {
 }
 
 .hero-text p {
-    font-size: 20px;
+    font-size: 22px;
     color: #584b85;
 }
 
 /* Features */
 .features {
-    display: flex;
+    display: flex; 
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .features li {
-    font-size: 17px;
     display: flex;
     align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #45426E;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.features li:hover {
+    color: #007bff;
+    transform: scale(1.05);
 }
 
 .features li svg {
-    width: 15px;
-    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    margin: 0;
 }
+
 
 /* Hero button */
 .hero-button {
@@ -170,13 +189,14 @@ video {
 .hero-button a {
     background-color: #0056b3;
     color: #fff;
-    padding: 20px 50px;
+    padding: 20px 40px;
     border-radius: 5px;
     font-weight: bold;
 }
 
 .hero-button a:hover {
     background-color: #007bff;
+    text-decoration: none;
 }
 
 .hero-button svg {
@@ -193,8 +213,8 @@ video {
 }
 
 .featured-on img {
-    width: 80px;
-    height: 30px;
+    width: 100px;
+    height: 35px;
 }
 
 /* Hero video */
