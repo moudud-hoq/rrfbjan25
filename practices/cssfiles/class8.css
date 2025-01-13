@@ -1,5 +1,6 @@
 /* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
 
 /* Reset styles */
 * {
@@ -18,9 +19,16 @@ body {
     background-color: #FFF9F3;
 }
 
+
 /* Typography */
-h1, h2, h3, h4, h5, h6, p {
+
+
+h1, h2, h4, h5, h6, p {
     margin: 0 0 15px;
+}
+
+h1, h2, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
 }
 
 a {
@@ -132,12 +140,11 @@ video {
 }
 
 .hero-text h1 {
-    font-family: "Righteous", serif;
     font-size: 70px;
     color: #17134A;
     line-height: 1;
     max-width: 1200px;
-    font-weight: 100;
+    font-weight: 800;
     letter-spacing: -3px;
 }
 
@@ -263,7 +270,6 @@ video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
     padding: 0 8px;
     width: 33.33%;
     height: auto;
@@ -276,12 +282,7 @@ video {
 }
 
 
-.company-single-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-}
+
 
 .staf-p {
     font-size: 18px;
@@ -293,4 +294,36 @@ video {
 .staf-p-span {
     font-weight: 700;
     background-color: #FCF2DE;
+    line-height: 1.6;
+}
+
+.staf-h3 h3 {
+    margin: 0 0 -15px;
+}
+
+.company-single-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.company-logo-img {
+    filter: grayscale(100%);
+}
+
+/*Transform Area*/
+
+.transform{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFF9F3;
+}
+
+.tr-upper{
+    padding: 40 40;
+
+    display: flex;
 }
