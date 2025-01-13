@@ -246,12 +246,13 @@ video {
 
 /*WHite Section*/
 
-.staf-and-logo-area{
-    margin: -80px 110px 0 ;
+.staf-and-logo-area {
+    margin: -80px 110px 0;
     background-color: rgb(255, 255, 255);
     padding: 20px 25px;
 }
-.staf{
+
+.staf {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,18 +264,33 @@ video {
     justify-content: center;
     align-items: center;
     gap: 5px;
+    padding: 0 8px;
+    width: 33.33%;
+    height: auto;
 }
-.staf-single-info img{
-    width: 50px;
-    height: 50px;
+
+.staf-single-info img {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
 
-.company-single-logo{
+.company-single-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 35px;
+}
 
+.staf-p {
+    font-size: 18px;
+    color: #45426E;
+    text-align: center;
+}
+
+
+.staf-p-span {
+    font-weight: 700;
+    background-color: #FCF2DE;
 }
