@@ -1,6 +1,6 @@
 /* Font imports */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
 
 /* Reset styles */
 * {
@@ -13,6 +13,7 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     scroll-behavior: smooth;
+    max-width: 1300px;
 }
 
 .wheat-bg {
@@ -28,7 +29,7 @@ h1, h2, h4, h5, h6, p {
 }
 
 h1, h2, h4, h5, h6 {
-    font-family: "Playfair Display", serif;
+    font-family: "Inter", serif;
 }
 
 a {
@@ -85,8 +86,8 @@ video {
 .menu a {
     font-size: 16px;
     color: #292281;
-    font-weight: 700;
-    font-family: "Lato", serif;
+    font-weight: 500;
+    font-family: "Inter", serif;
 }
 
 .menu a:hover {
@@ -190,28 +191,35 @@ video {
 
 /* Hero button */
 .hero-button {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    gap: 10px;
 }
 
 .hero-button a {
+    display: inline-flex;
+    align-items: center;
     background-color: #0056b3;
     color: #fff;
-    padding: 20px 40px;
+    padding: 12px 24px;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .hero-button a:hover {
     background-color: #007bff;
-    text-decoration: none;
 }
 
 .hero-button svg {
-    width: 10px;
+    width: 18px;
+    height: 18px;
 }
+
 
 /* Featured section */
 .featured-on {
@@ -239,8 +247,8 @@ video {
 
 .video-border-wrapper {
     background-color: #d3d3d3;
-    padding: 25px;
-    border-radius: 24px;
+    padding: 20px;
+    border-radius: 25px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     width: 100%;
 }
@@ -248,15 +256,14 @@ video {
 .hero-video video {
     width: 100%;
     display: block;
-    border-radius: 8px;
+    border-radius: 25px;
 }
 
 /*WHite Section*/
-
 .staf-and-logo-area {
     margin: -80px 110px 0;
     background-color: rgb(255, 255, 255);
-    padding: 20px 25px;
+    padding: 60px 25px 80px 25px;
 }
 
 .staf {
@@ -281,15 +288,11 @@ video {
     border-radius: 50%;
 }
 
-
-
-
 .staf-p {
     font-size: 18px;
     color: #45426E;
     text-align: center;
 }
-
 
 .staf-p-span {
     font-weight: 700;
@@ -313,17 +316,155 @@ video {
     filter: grayscale(100%);
 }
 
-/*Transform Area*/
 
-.transform{
-    max-width: 1100px;
+
+
+/*Transform Area*/
+.transform {
+    max-width: 1170px;
     width: 100%;
     margin: 0 auto;
     background-color: #FFF9F3;
+    padding: 0 30px;
 }
 
-.tr-upper{
-    padding: 40 40;
-
+.tr-upper {
     display: flex;
+    align-items: center;
+}
+
+.tr-h1 {
+    font-family: "Inter", serif;
+}
+
+.tr-text {
+    width: 50%;
+}
+
+.tr-text-wrapper {
+    padding: 30px 0px;
+}
+
+.tr-p {
+    font-size: 18px;
+    color: #45426E;
+    font-weight: 500;
+}
+
+.tr-text-li li, svg {
+    list-style-type: none;
+    font-weight: 500;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.tr-li {
+    padding: 5px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0px;
+    margin: 10px 0 0 0;
+}
+
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #3a30ba;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+.custom-button:hover {
+    background-color: rgb(14, 14, 70);
+}
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-text{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.hr{
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    opacity: .3;
+}
+
+.tr-image {
+    width: 50%;
+    padding: 20px;
+}
+
+/*transform-bottom*/
+.tr-bt-boxes{
+    display: flex;
+    padding: 30px 0;
+}
+
+.trb-h{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 0 10px 0; 
+    color: #201C51;
+}
+
+.trb-p {
+    color: #45426E;
+    font-size: 17px;
+}
+
+.tr-bt-singl-bx{
+    padding: 0 20px;
+}
+
+.trb-svg{
+    color: #3A30BA;
+}
+
+/*No Code Area Area*/
+.transform {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFF9F3;
+    padding: 0 30px;
+}
+
+
+
+/*White Label CMS Area*/
+.no-code-builder {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F1FAF7;
+    padding: 0 30px;
+}
+
+/*Build With Airable Area*/
+.transform {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFF9F3;
+    padding: 0 30px;
 }
