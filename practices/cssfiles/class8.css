@@ -590,7 +590,7 @@
         .nm-texts {
             width: 100%;
             text-align: center;
-            padding: 130px 0 80px;
+            padding: 90px 0 50px;
         }
 
         .nm-texts h1 {
@@ -605,7 +605,7 @@
 
         .no-mai-boxes {
             padding: 0px 20px;
-            max-width: 1070px;
+            max-width: 1200px;
             margin: 0 auto;
             width: 100%;
         }
@@ -636,7 +636,7 @@
             align-items: center;
             flex-direction: column;
             background-color: #FFF9F3;
-            padding: 100px 0;
+            padding: 80px 0;
         }
 
         .aff-texts {
@@ -657,7 +657,7 @@
 
         /*Extended Guider Atea*/
         .ega-main {
-            margin: 0 0 120px 0;
+            margin: 0 0 100px 0;
         }
 
         .exg-area {
@@ -671,15 +671,29 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 5px;
+            gap: 25px;
         }
 
         .exg-singl-bx {
-            width: 33.00%;
-            padding: 20px 20px;
+            width: 30.00%;
+            padding: 20px;
             background-color: #F6F6FC;
             border-radius: 10px;
-            border-bottom: 1px #0056b3;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .exgsb-one{
+            border-bottom: 3px solid #8C3BFC;
+        }
+        .exgsb-two{
+            border-bottom: 3px solid #DE238E;
+
+        }
+
+        .exgsb-three{
+            border-bottom: 3px solid #FFCD87;
+
         }
 
         .exg-texts {
