@@ -210,6 +210,7 @@
         }
 
         .hero-button a {
+            position: relative;
             display: inline-flex;
             align-items: center;
             background-color: #0056b3;
@@ -229,6 +230,11 @@
         .hero-button svg {
             width: 18px;
             height: 18px;
+        }
+
+        .hero-btn-back{
+            position: absolute;
+
         }
 
         /* Featured section */
@@ -772,6 +778,11 @@
             font-size: 16px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+        }
+
+        .footer-btn-back{
+            position: absolute;
+            
         }
 
         .footer-top-button a:hover {
