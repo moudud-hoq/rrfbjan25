@@ -36,6 +36,7 @@
         p {
             margin: 0 0 15px;
             font-family: "Inter", serif;
+            line-height: 1.6;
 
         }
 
@@ -498,7 +499,8 @@
         /* Join Over Area */
         .join-over {
             width: 100%;
-            max-width: 1170px;
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -509,7 +511,7 @@
         .left-jo,
         .right-jo {
             width: 50%;
-            padding: 0 25px;
+            padding: 0 45px;
         }
 
         .left-jo h2 {
@@ -592,4 +594,67 @@
             box-sizing: border-box;
         }
 
-        
+
+        /*No Mai Area*/
+        .no-mai-area {
+            max-width: 1400px;
+            margin: 0 auto;
+
+        }
+
+        .nm-texts {
+            width: 100%;
+            text-align: center;
+            padding: 130px 0 80px;
+        }
+
+        .nm-texts h1 {
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        .nm-texts p {
+            font-size: 20px;
+        }
+
+        .no-mai-boxes {
+            padding: 0px 20px;
+            max-width: 1070px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .no-mai-single-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nm-singl-bx {
+            width: 33.33%;
+            padding: 20px 30px;
+        }
+
+        /*Affordable Pricing*/
+        .aff-price {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: #FFF9F3;
+            padding: 100px 0;
+        }
+
+        .aff-texts{
+            max-width: 700px;
+            text-align: center;
+        }
+
+      .aff-texts h1{
+            font-size: 60px;
+            font-weight: 600;
+        }
