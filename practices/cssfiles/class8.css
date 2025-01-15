@@ -1,8 +1,6 @@
         /* Font imports */
-
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
 
-        /* Reset styles */
         *,
         *::before,
         *::after {
@@ -24,7 +22,7 @@
         }
 
         .wheat-bg {
-            background-color: #FFF9F3;
+            padding: 0 0 160px 0;
         }
 
         /* Typography */
@@ -67,7 +65,7 @@
             width: 100%;
             padding: 20px 100px 15px;
             border-bottom: 1px solid rgb(211, 211, 211);
-            background-color: white;
+            background-color: #FFF9F3;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -139,20 +137,14 @@
             border-radius: 5px;
         }
 
-
-
-
-
-
         /* Hero section */
         .hero-section {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 140px 0;
+            padding: 160px 0 60px 0;
             gap: 15px;
-            background-color: white;
             transition: background-color 0.3s ease;
         }
 
@@ -277,17 +269,18 @@
             border-radius: 25px;
         }
 
-        /* Scroll effect */
-        body.scrolled .header-wrapper,
-        body.scrolled .hero-section {
-            background-color: #FFF9F3;
-        }
 
         /*WHite Section*/
+
+        .white-section {
+            margin: -130px 80px 0;
+
+        }
+
         .staf-and-logo-area {
             margin: 0 auto;
             background-color: rgb(255, 255, 255);
-            padding: 60px 25px 80px 25px;
+            padding: 30px 35px 80px;
         }
 
         .staf {
@@ -326,6 +319,7 @@
 
         .staf-h3 h3 {
             margin: 0 0 -15px;
+            color: #666;
         }
 
         .company-single-logo {
@@ -339,9 +333,6 @@
         .company-logo-img {
             filter: grayscale(100%);
         }
-
-
-
 
         /*Transform Area*/
         .transform {
@@ -481,7 +472,6 @@
             background-color: #EEEBFA;
         }
 
-
         /*White Label CMS Area*/
         .white-label-cms,
         .build-with-airable,
@@ -493,9 +483,6 @@
             border-radius: 10px;
         }
 
-
-
-        /*Join Over Area*/
         /* Join Over Area */
         .join-over {
             width: 100%;
@@ -591,9 +578,8 @@
             width: 100%;
             border: 1px solid gray;
             padding: 30px 20px;
-            box-sizing: border-box;
+            border-radius: 5px;
         }
-
 
         /*No Mai Area*/
         .no-mai-area {
@@ -783,10 +769,6 @@
             height: 18px;
         }
 
-
-
-
-
         /*Center*/
         .footer-center {
             display: flex;
@@ -893,11 +875,7 @@
             padding-left: 5px;
         }
 
-
-
-
         /*Footer Bootom*/
-
         .footer-bottom {
             display: flex;
             justify-content: space-between;
