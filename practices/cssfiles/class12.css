@@ -1,0 +1,74 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    background: #007acc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  section h2 {
+    color: #007acc;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 5px;
+  }
+  
+  section ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  section ul li {
+    margin: 5px 0;
+  }
+  
+  pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-left: 4px solid #007acc;
+    overflow-x: auto;
+  }
+  
+  footer {
+    background: #007acc;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
