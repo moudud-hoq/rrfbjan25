@@ -1,74 +1,113 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f9f9f9;
+    background: #e0f7fa;
     color: #333;
-  }
-  
-  header {
-    background: #007acc;
+}
+
+header {
+    background: linear-gradient(90deg, #007acc, #00c6ff);
     color: white;
     padding: 20px;
     text-align: center;
-  }
-  
-  header h1 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+header:hover {
+    transform: translateY(-10px);
+}
+
+header h1 {
     margin: 0;
     font-size: 2.5rem;
-  }
-  
-  header p {
+}
+
+header p {
     margin: 5px 0 0;
     font-size: 1.2rem;
-  }
-  
-  main {
+}
+
+main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  section {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+section {
     margin-bottom: 20px;
-  }
-  
-  section h2 {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
     color: #007acc;
     border-bottom: 2px solid #007acc;
     padding-bottom: 5px;
-  }
-  
-  section ul {
+    transition: color 0.3s ease-in-out;
+}
+
+section h2:hover {
+    color: #00c6ff;
+}
+
+section ul {
     margin: 10px 0;
     padding-left: 20px;
-  }
-  
-  section ul li {
+}
+
+section ul li {
     margin: 5px 0;
-  }
-  
-  pre {
+    transition: transform 0.3s ease-in-out;
+}
+
+section ul li:hover {
+    transform: translateX(10px);
+}
+
+pre {
     background: #f4f4f4;
     padding: 10px;
     border-left: 4px solid #007acc;
     overflow-x: auto;
-  }
-  
-  footer {
-    background: #007acc;
+    border-radius: 4px;
+    transition: background 0.3s ease-in-out;
+}
+
+pre:hover {
+    background: #e0f7fa;
+}
+
+footer {
+    background: linear-gradient(90deg, #007acc, #00c6ff);
     color: white;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-  }
-  
-  footer p {
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+footer:hover {
+    transform: translateY(10px);
+}
+
+footer p {
     margin: 0;
-  }
-  
+}
