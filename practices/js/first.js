@@ -27,3 +27,7 @@ let contact = {
     email: "rasel@email.com",
     address: "Dhaka, Bangladesh"
 };
+
+
+let x = "Red" + " " + "Apple"; 
+console.log(x);
