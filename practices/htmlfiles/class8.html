@@ -17,8 +17,11 @@
             <div class="container">
                 <div class="header-wrapper">
                     <div class="logo">
-                        <img src="https://cdn.dorik.com/5e373b6c43a72a001f56dbf6/61a1f4035bfd7b0011fb92f9/images/logo-dark_jta933n2.svg" alt="" width="80px" height="auto">
+                        <img src="https://cdn.dorik.com/5e373b6c43a72a001f56dbf6/61a1f4035bfd7b0011fb92f9/images/logo-dark_jta933n2.svg"
+                            alt="" width="80px" height="auto">
                     </div>
+
+                    <!-- Menu -->
                     <div class="menu">
                         <nav>
                             <ul class="menu-ul">
@@ -31,10 +34,13 @@
                             </ul>
                         </nav>
                     </div>
+
+
                     <div class="log-sign-btn">
-                        <a href="#" class="login">Login</a>
-                        <a href="#" class="signup">Sign Up</a>
+                        <a href="#" class="login" id="login-btn">Login</a>
+                        <a href="#" class="signup" id="signup-btn">Sign Up</a>
                     </div>
+
                 </div>
             </div>
         </header>
@@ -42,7 +48,7 @@
 
         <section class="hero-section">
             <div class="hero-text">
-                <h1>Create Your Beautiful Websites from Just a Prompt</h1>
+                <h1 id="hero-title">Create Your Beautiful Websites from Just a Prompt</h1>
                 <p>Build websites in minutes with the #1 AI website building platform</p>
             </div>
             <div class="hero-features">
@@ -85,40 +91,46 @@
                 </ul>
             </div>
 
-            <div class="hero-button"> <img
-                    src="https://cdn.dorik.com/5e373b6c43a72a001f56dbf6/61a1f4035bfd7b0011fb92f9/images/button-bg_wqfy1ggx.svg"
+            <!-- Hero Button -->
+            <div class="hero-button">
+                <img src="https://cdn.dorik.com/5e373b6c43a72a001f56dbf6/61a1f4035bfd7b0011fb92f9/images/button-bg_wqfy1ggx.svg"
                     alt="" width="350px" class="hero-btn-back">
-                <a href="#">Try it Free
+                <a href="#" id="try-it-free">Try it Free
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right"
                         class="svg-inline--fa fa-angle-right fa-fw icon " role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 320 512" data-testid="icon-test">
                         <path fill="currentColor"
                             d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z">
                         </path>
-                    </svg></a>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="hidden-box" id="hidden-box">
+                <p>ওহে এখানে কিছুই নাই! হা হা হা!</p>
             </div>
 
             <div class="featured-on">
                 <p>Featured On:</p>
-                <img src="/images/usa-today-new-1-1-1-1isQue.svg" alt="">
-                <img src="/images/CNN.svg.png" alt="">
-                <img src="/images/pcmag-wggP-y.svg" alt="">
-                <img src="/images/hubspot_logo-I6cXPe.svg" alt="">
-                <img src="/images/usn-logo-large-b5R6h2.svg" alt="">
+                <img src="https://files.dorik.com/635bcad9b8a74e0091632998/usa-today-new-1-1-1-1isQue.svg" alt="">
+                <img src="https://cdn.cmsfly.com/635bcad9b8a74e0091632998/wlz8cbkhsk7tdjvq27vsel7whrf0sf3rcaoslpdq-_8Kimv.png"
+                    alt="">
+                <img src="https://files.dorik.com/635bcad9b8a74e0091632998/pcmag-wggP-y.svg" alt="">
+                <img src="https://files.dorik.com/635bcad9b8a74e0091632998/hubspot_logo-I6cXPe.svg" alt="">
+                <img src="https://files.dorik.com/635bcad9b8a74e0091632998/usn-logo-large-b5R6h2.svg" alt="">
             </div>
             <div class="hero-video">
                 <div class="video-border-wrapper">
                     <video
                         poster="https://cdn.cmsfly.com/635bcad9b8a74e0091632998/images/41829376516705076200196503870756626797345056n-0OU1W.jpeg"
                         src="https://files.dorik.com/635bcad9b8a74e0091632998/videos/Dorik-AI-Intro-720p-vG0YQ.mp4"
-                        controls
-                        preload="metadata">
+                        controls preload="metadata">
                     </video>
                 </div>
             </div>
-            
-            
-            
+
+
+
 
         </section>
     </section>
@@ -1072,6 +1084,7 @@
         </div>
     </footer>
 
+    <script src="/practices/js/class8.js"></script>
 </body>
 
 </html>

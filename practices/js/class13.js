@@ -12,3 +12,7 @@ myBtn.addEventListener('click', function () {
 
     hiddenBox.style.display = 'block'
 })
+
+myBtn.addEventListener('click', function () {
+    alert('Button was clicked!');
+});
