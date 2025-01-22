@@ -17,10 +17,6 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-header:hover {
-    transform: translateY(-10px);
-}
-
 header h1 {
     margin: 0;
     font-size: 2.5rem;
@@ -29,6 +25,45 @@ header h1 {
 header p {
     margin: 5px 0 0;
     font-size: 1.2rem;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 10px;
+}
+
+.nav ul li {
+    margin-bottom: 10px; 
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    color: white;
+    background: #007acc;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul li a:hover {
+    color: black;
+    background: #00c6ff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 main {
