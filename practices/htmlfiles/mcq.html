@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Your Knowledge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grow Your Knowledge</h1>
+        <div id="quiz-container">
+            <!-- Questions will be dynamically injected here -->
+        </div>
+        <div class="result" id="result"></div>
+        <p id="global-timer">Total time left: 300 seconds</p>
+        <div class="navigation-buttons">
+            <button id="prev-button" onclick="prevQuestion()" disabled>Previous</button>
+            <button id="next-button" onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What does the p element represent in HTML? (HTML এ p উপাদানটি কী উপস্থাপন করে?)",
+                options: ["A paragraph", "A heading", "A list", "A table"],
+                answer: 0
+            },
+            {
+                question: "Which tag is used for the largest heading in HTML? (HTML এ সবচেয়ে বড় শিরোনামের জন্য কোন ট্যাগটি ব্যবহার করা হয়?)",
+                options: ["h6", "h1", "h4", "h3"],
+                answer: 1
+            },
+            {
+                question: "What is the purpose of the em tag in HTML? (HTML এ em ট্যাগের উদ্দেশ্য কী?)",
+                options: ["To make text bold", "To emphasize text", "To underline text", "To add a hyperlink"],
+                answer: 1
+            },
+            {
+                question: "Which tag is used to italicize text in HTML? (HTML এ কোন ট্যাগটি টেক্সটকে ইটালিক করতে ব্যবহৃত হয়?)",
+                options: ["i", "b", "p", "u"],
+                answer: 0
+            },
+            {
+                question: "How many levels of headings are available in HTML? (HTML এ কত স্তরের শিরোনাম উপলব্ধ?)",
+                options: ["3", "5", "6", "8"],
+                answer: 2
+            },
+            {
+                question: "What is the correct tag for creating bold text in HTML? (HTML এ বোল্ড টেক্সট তৈরি করার জন্য সঠিক ট্যাগটি কী?)",
+                options: ["strong", "b", "Both strong and b", "None of the above"],
+                answer: 2
+            },
+            {
+                question: "Which tag creates a line break in HTML? (HTML এ কোন ট্যাগটি একটি লাইন ব্রেক তৈরি করে?)",
+                options: ["hr", "br", "p", "h1"],
+                answer: 1
+            },
+            {
+                question: "What does the h4 tag represent in HTML? (HTML এ h4 ট্যাগটি কী উপস্থাপন করে?)",
+                options: ["A small paragraph", "A level 4 heading", "A bold text", "A horizontal line"],
+                answer: 1
+            },
+            {
+                question: "What is the purpose of the hr tag in HTML? (HTML এ hr ট্যাগের উদ্দেশ্য কী?)",
+                options: ["To create a horizontal line", "To italicize text", "To create a heading", "To emphasize text"],
+                answer: 0
+            },
+            {
+                question: "Which of the following is correct for adding emphasized text? (নিম্নলিখিত কোনটি জোর দেওয়া টেক্সট যোগ করার জন্য সঠিক?)",
+                options: ["emphasis", "em", "emph", "emp"],
+                answer: 1
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let globalTimeLeft = 300;
+        const quizContainer = document.getElementById("quiz-container");
+        const resultContainer = document.getElementById("result");
+        const globalTimerElement = document.getElementById("global-timer");
+        const prevButton = document.getElementById("prev-button");
+        const nextButton = document.getElementById("next-button");
+
+        function showQuestion() {
+            if (currentQuestionIndex >= questions.length) {
+                endQuiz();
+                return;
+            }
+
+            const questionObj = questions[currentQuestionIndex];
+            quizContainer.innerHTML = `
+                <div class="question">
+                    <h3>Question ${currentQuestionIndex + 1}: ${questionObj.question}</h3>
+                    <ul class="options">
+                        ${questionObj.options
+                            .map(
+                                (option, index) => `
+                            <li>
+                                <button onclick="checkAnswer(${index})">${option}</button>
+                            </li>
+                        `
+                            )
+                            .join("")}
+                    </ul>
+                </div>
+            `;
+            updateNavigationButtons();
+        }
+
+        function startGlobalTimer() {
+            globalTimer = setInterval(() => {
+                if (globalTimeLeft <= 0) {
+                    clearInterval(globalTimer);
+                    endQuiz();
+                }
+                globalTimerElement.textContent = `Total time left: ${--globalTimeLeft} seconds`;
+            }, 1000);
+        }
+
+        function checkAnswer(selectedOption) {
+            const questionObj = questions[currentQuestionIndex];
+            if (selectedOption === questionObj.answer) {
+                score++;
+                resultContainer.innerHTML = "<p class='correct'>Correct!</p>";
+            } else {
+                resultContainer.innerHTML = `<p class='wrong'>Wrong! The correct answer is: ${
+                    questionObj.options[questionObj.answer]
+                }</p>`;
+            }
+
+            // Automatically move to the next question or end the quiz
+            setTimeout(() => {
+                if (currentQuestionIndex < questions.length - 1) {
+                    nextQuestion();
+                } else {
+                    endQuiz();
+                }
+            }, 1000);
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                resultContainer.innerHTML = "";
+                showQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                resultContainer.innerHTML = "";
+                showQuestion();
+            } else {
+                endQuiz();
+            }
+        }
+
+        function updateNavigationButtons() {
+            prevButton.disabled = currentQuestionIndex === 0;
+            nextButton.disabled = currentQuestionIndex === questions.length - 1;
+        }
+
+        function endQuiz() {
+            clearInterval(globalTimer); // Stop the global timer
+            let answersSummary = "<ul>";
+            questions.forEach((q, index) => {
+                answersSummary += `<li>Question ${index + 1}: ${q.question} <br> Correct Answer: ${q.options[q.answer]}</li>`;
+            });
+            answersSummary += "</ul>";
+
+            quizContainer.innerHTML = "";
+            resultContainer.innerHTML = `
+                <h2>Quiz Completed</h2>
+                <p>Your score is ${score} out of ${questions.length}</p>
+                <h3>Answers Summary:</h3>
+                ${answersSummary}
+            `;
+            prevButton.disabled = true;
+            nextButton.disabled = true;
+        }
+
+        showQuestion();
+        startGlobalTimer();
+    </script>
+</body>
+</html>
