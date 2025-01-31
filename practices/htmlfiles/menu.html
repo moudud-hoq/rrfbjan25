@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dropdown Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #444;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background: #555;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #555;
+            display: none;
+            min-width: 150px;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px;
+        }
+
+        .navbar li:hover .dropdown {
+            display: block;
+        }
+
+        .banner {
+            background: url('https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/56664542_1146298978873203_5625746673394253824_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHqYtD4VZZ9JWyqUJp-yCRm-3XILAz1FOH7dcgsDPUU4WH0Xh5NCg4BqabgyMWk6QbH-6aYrt7U4wtk-TCfjVkB&_nc_ohc=n4gGrWMVxOsQ7kNvgFuISD5&_nc_oc=AdiNvCsjl28mJjStAGr7XRngVjO2a9aCC2PyjeGLXgfQbRtGrPrhKJM-MOGTBGzzWUA&_nc_zt=23&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AYCfKzSwdSz_C3rGswuzokL&oh=00_AYB28hpwEPQtVgBMI181kSiUjibQqZBtvbvO2S9BChXsUA&oe=67C467C7') no-repeat center/cover;
+            height: 300px;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Modern Dropdown Menu Site</header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a>
+                <div class="dropdown">
+                    <a href="#">Submenu 1</a>
+                    <a href="#">Submenu 2</a>
+                </div>
+            </li>
+            <li><a href="#">About</a>
+                <div class="dropdown">
+                    <a href="#">Team</a>
+                    <a href="#">Mission</a>
+                </div>
+            </li>
+            <li><a href="#">Services</a>
+                <div class="dropdown">
+                    <a href="#">Web Design</a>
+                    <a href="#">Marketing</a>
+                </div>
+            </li>
+            <li><a href="#">Portfolio</a>
+                <div class="dropdown">
+                    <a href="#">Projects</a>
+                    <a href="#">Gallery</a>
+                </div>
+            </li>
+            <li><a href="#">Contact</a>
+                <div class="dropdown">
+                    <a href="#">Email</a>
+                    <a href="#">Location</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="banner">Welcome to Our Website</div>
+    <div class="content">
+        <div class="card">
+            <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/56664542_1146298978873203_5625746673394253824_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHqYtD4VZZ9JWyqUJp-yCRm-3XILAz1FOH7dcgsDPUU4WH0Xh5NCg4BqabgyMWk6QbH-6aYrt7U4wtk-TCfjVkB&_nc_ohc=n4gGrWMVxOsQ7kNvgFuISD5&_nc_oc=AdiNvCsjl28mJjStAGr7XRngVjO2a9aCC2PyjeGLXgfQbRtGrPrhKJM-MOGTBGzzWUA&_nc_zt=23&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AYCfKzSwdSz_C3rGswuzokL&oh=00_AYB28hpwEPQtVgBMI181kSiUjibQqZBtvbvO2S9BChXsUA&oe=67C467C7"
+                alt="Card Image">
+            <h3>Web Design</h3>
+            <p>Modern and responsive designs.</p>
+        </div>
+        <div class="card">
+            <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/56664542_1146298978873203_5625746673394253824_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHqYtD4VZZ9JWyqUJp-yCRm-3XILAz1FOH7dcgsDPUU4WH0Xh5NCg4BqabgyMWk6QbH-6aYrt7U4wtk-TCfjVkB&_nc_ohc=n4gGrWMVxOsQ7kNvgFuISD5&_nc_oc=AdiNvCsjl28mJjStAGr7XRngVjO2a9aCC2PyjeGLXgfQbRtGrPrhKJM-MOGTBGzzWUA&_nc_zt=23&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AYCfKzSwdSz_C3rGswuzokL&oh=00_AYB28hpwEPQtVgBMI181kSiUjibQqZBtvbvO2S9BChXsUA&oe=67C467C7"
+                alt="Card Image">
+            <h3>Marketing</h3>
+            <p>Boost your business online.</p>
+        </div>
+        <div class="card">
+            <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/56664542_1146298978873203_5625746673394253824_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHqYtD4VZZ9JWyqUJp-yCRm-3XILAz1FOH7dcgsDPUU4WH0Xh5NCg4BqabgyMWk6QbH-6aYrt7U4wtk-TCfjVkB&_nc_ohc=n4gGrWMVxOsQ7kNvgFuISD5&_nc_oc=AdiNvCsjl28mJjStAGr7XRngVjO2a9aCC2PyjeGLXgfQbRtGrPrhKJM-MOGTBGzzWUA&_nc_zt=23&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AYCfKzSwdSz_C3rGswuzokL&oh=00_AYB28hpwEPQtVgBMI181kSiUjibQqZBtvbvO2S9BChXsUA&oe=67C467C7"
+                alt="Card Image">
+            <h3>Technology</h3>
+            <p>Latest trends in tech world.</p>
+        </div>
+    </div>
+    <footer>&copy; 2025 Modern Website. All Rights Reserved.</footer>
+</body>
+
+</html>
