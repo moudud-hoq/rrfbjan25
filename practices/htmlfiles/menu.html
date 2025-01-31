@@ -1,113 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Dropdown Menu</title>
+    <title>Modern Responsive Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
         }
-
         body {
-            background: #f4f4f4;
+            background: #f4f4f9;
+            color: #333;
         }
-
         header {
-            background: #333;
-            color: white;
-            padding: 15px;
+            background: linear-gradient(135deg, #ff6f91, #ff9a9e, #fecfef, #f3e7ff);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            color: rgb(71, 0, 0);
+            padding: 20px 0;
             text-align: center;
-            font-size: 24px;
+            font-size: 32px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+            10% { background-position: 0% 50%; }
+        }
         .navbar {
             display: flex;
-            justify-content: center;
-            background: #444;
-        }
-
-        .navbar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        .navbar li {
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            padding: 10px 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             position: relative;
         }
-
-        .navbar a {
-            display: block;
-            padding: 15px 20px;
-            color: white;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
             text-decoration: none;
         }
-
-        .navbar a:hover {
-            background: #555;
+        .menu-toggle {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
         }
-
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .menu > li {
+            position: relative;
+        }
+        .menu > li > a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+        .menu > li > a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ff6f91;
+        }
         .dropdown {
             position: absolute;
             top: 100%;
-            left: 0;
-            background: #555;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4ca1af;
             display: none;
-            min-width: 150px;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            z-index: 1000;
+            overflow: hidden;
         }
-
         .dropdown a {
             display: block;
             padding: 10px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
         }
-
-        .navbar li:hover .dropdown {
+        .dropdown a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ff6f91;
+        }
+        .menu li:hover .dropdown {
             display: block;
         }
-
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .auth-buttons a {
+            padding: 10px 20px;
+            background: #ff6f91;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .auth-buttons a:hover {
+            background: #ff9a9e;
+            transform: scale(1.05);
+        }
         .banner {
-            background: url('https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/56664542_1146298978873203_5625746673394253824_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHqYtD4VZZ9JWyqUJp-yCRm-3XILAz1FOH7dcgsDPUU4WH0Xh5NCg4BqabgyMWk6QbH-6aYrt7U4wtk-TCfjVkB&_nc_ohc=n4gGrWMVxOsQ7kNvgFuISD5&_nc_oc=AdiNvCsjl28mJjStAGr7XRngVjO2a9aCC2PyjeGLXgfQbRtGrPrhKJM-MOGTBGzzWUA&_nc_zt=23&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AYCfKzSwdSz_C3rGswuzokL&oh=00_AYB28hpwEPQtVgBMI181kSiUjibQqZBtvbvO2S9BChXsUA&oe=67C467C7') no-repeat center/cover;
+            background: url('https://url-shortener.me/4DD') no-repeat center/cover;
             height: 300px;
             text-align: center;
-            color: white;
+            color: rgb(0, 217, 255);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 52px;
+            font-weight: 800;
         }
-
         .content {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 20px;
+            gap: 30px;
+            padding: 50px 5%;
             flex-wrap: wrap;
         }
-
         .card {
             background: white;
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
-
-        .card img {
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .card-image {
             width: 100%;
-            border-radius: 10px;
+            height: 250px;
+            object-fit: cover;
         }
-
+        .card-content {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #f6f8f9, #e5ebee);
+        }
+        .card-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ff6f91;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
         .card h3 {
-            margin: 10px 0;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 22px;
         }
-
+        .card p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        .card-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #ff6f91;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+        .card-link:hover {
+            background: #4ca1af;
+        }
         footer {
             background: #333;
             color: white;
@@ -115,67 +196,141 @@
             padding: 15px;
             margin-top: 20px;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+            .menu-toggle {
+                display: block;
+                align-self: flex-end;
+                margin-bottom: 10px;
+            }
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .menu.active {
+                display: flex;
+            }
+            .menu > li {
+                width: 100%;
+                text-align: center;
+            }
+            .dropdown {
+                position: static;
+                transform: none;
+                display: none;
+                background: rgba(0,0,0,0.1);
+            }
+            .menu li:hover .dropdown {
+                display: block;
+            }
+            .auth-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 90%;
+                max-width: 400px;
+            }
+        }
     </style>
 </head>
-
 <body>
     <header>Modern Dropdown Menu Site</header>
     <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a>
+        <a href="#" class="logo">MyLogo</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="#">Home</a>
                 <div class="dropdown">
                     <a href="#">Submenu 1</a>
                     <a href="#">Submenu 2</a>
                 </div>
             </li>
-            <li><a href="#">About</a>
+            <li>
+                <a href="#">About</a>
                 <div class="dropdown">
                     <a href="#">Team</a>
                     <a href="#">Mission</a>
                 </div>
             </li>
-            <li><a href="#">Services</a>
+            <li>
+                <a href="#">Services</a>
                 <div class="dropdown">
                     <a href="#">Web Design</a>
                     <a href="#">Marketing</a>
                 </div>
             </li>
-            <li><a href="#">Portfolio</a>
+            <li>
+                <a href="#">Portfolio</a>
                 <div class="dropdown">
                     <a href="#">Projects</a>
                     <a href="#">Gallery</a>
                 </div>
             </li>
-            <li><a href="#">Contact</a>
+            <li>
+                <a href="#">Contact</a>
                 <div class="dropdown">
                     <a href="#">Email</a>
                     <a href="#">Location</a>
                 </div>
             </li>
         </ul>
+        <div class="auth-buttons">
+            <a href="#">Sign In</a>
+            <a href="#">Sign Up</a>
+        </div>
     </nav>
     <div class="banner">Welcome to Our Website</div>
     <div class="content">
         <div class="card">
-            <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/56664542_1146298978873203_5625746673394253824_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHqYtD4VZZ9JWyqUJp-yCRm-3XILAz1FOH7dcgsDPUU4WH0Xh5NCg4BqabgyMWk6QbH-6aYrt7U4wtk-TCfjVkB&_nc_ohc=n4gGrWMVxOsQ7kNvgFuISD5&_nc_oc=AdiNvCsjl28mJjStAGr7XRngVjO2a9aCC2PyjeGLXgfQbRtGrPrhKJM-MOGTBGzzWUA&_nc_zt=23&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AYCfKzSwdSz_C3rGswuzokL&oh=00_AYB28hpwEPQtVgBMI181kSiUjibQqZBtvbvO2S9BChXsUA&oe=67C467C7"
-                alt="Card Image">
-            <h3>Web Design</h3>
-            <p>Modern and responsive designs.</p>
+            <img src="https://url-shortener.me/4DD" alt="Web Design" class="card-image">
+            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="card-content">
+                <h3>Web Design</h3>
+                <p>Create stunning, responsive websites that captivate your audience and drive engagement.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
         </div>
         <div class="card">
-            <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/56664542_1146298978873203_5625746673394253824_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHqYtD4VZZ9JWyqUJp-yCRm-3XILAz1FOH7dcgsDPUU4WH0Xh5NCg4BqabgyMWk6QbH-6aYrt7U4wtk-TCfjVkB&_nc_ohc=n4gGrWMVxOsQ7kNvgFuISD5&_nc_oc=AdiNvCsjl28mJjStAGr7XRngVjO2a9aCC2PyjeGLXgfQbRtGrPrhKJM-MOGTBGzzWUA&_nc_zt=23&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AYCfKzSwdSz_C3rGswuzokL&oh=00_AYB28hpwEPQtVgBMI181kSiUjibQqZBtvbvO2S9BChXsUA&oe=67C467C7"
-                alt="Card Image">
-            <h3>Marketing</h3>
-            <p>Boost your business online.</p>
+            <img src="https://url-shortener.me/4DD" alt="Digital Marketing" class="card-image">
+            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="card-content">
+                <h3>Digital Marketing</h3>
+                <p>Boost your online presence with targeted marketing strategies and innovative campaigns.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
         </div>
         <div class="card">
-            <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t1.6435-9/56664542_1146298978873203_5625746673394253824_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHqYtD4VZZ9JWyqUJp-yCRm-3XILAz1FOH7dcgsDPUU4WH0Xh5NCg4BqabgyMWk6QbH-6aYrt7U4wtk-TCfjVkB&_nc_ohc=n4gGrWMVxOsQ7kNvgFuISD5&_nc_oc=AdiNvCsjl28mJjStAGr7XRngVjO2a9aCC2PyjeGLXgfQbRtGrPrhKJM-MOGTBGzzWUA&_nc_zt=23&_nc_ht=scontent.fdac5-2.fna&_nc_gid=AYCfKzSwdSz_C3rGswuzokL&oh=00_AYB28hpwEPQtVgBMI181kSiUjibQqZBtvbvO2S9BChXsUA&oe=67C467C7"
-                alt="Card Image">
-            <h3>Technology</h3>
-            <p>Latest trends in tech world.</p>
+            <img src="https://url-shortener.me/4DD" alt="Technology Solutions" class="card-image">
+            <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+            <div class="card-content">
+                <h3>Technology Solutions</h3>
+                <p>Innovative tech solutions to transform your business and stay ahead of the competition.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
         </div>
     </div>
     <footer>&copy; 2025 Modern Website. All Rights Reserved.</footer>
-</body>
 
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
 </html>
